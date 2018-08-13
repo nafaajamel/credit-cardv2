@@ -1,0 +1,156 @@
+body{
+  margin:0;
+}
+*{
+  color:white;
+}
+
+.card{
+  background: url('./img/bg.jpg')  no-repeat ;
+  background-size: cover;
+  width:500px;
+  height:310px;
+  border:1px  outset gray;
+  border-radius: 20px;
+  margin:100px auto;
+  /* background: linear-gradient(to top left, rgb(3, 14, 46) ,rgb(20, 93, 141) ,rgb(3, 12, 41) ); */
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 20px 0 20px 45px;
+  
+}
+.title{
+  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:18px;
+  float: right;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+font-weight: 900;
+  padding: 0 60px;
+}
+.info{
+  display: flex;
+  flex-flow: row nowrap;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+ padding: 10% 0;
+ margin: auto
+}
+.numbers{
+  width:75%;
+  text-align: center;
+  
+}
+
+@font-face{
+  font-family: number;
+  src:url(img/CREDC___.ttf)
+}
+.card-number{
+
+  font-family: number;
+  font-size: 18px;
+  font-weight: 400;
+  text-justify: justify;
+  letter-spacing: 4px;
+  background: rgba(232, 235, 24, 0.4);
+  padding:2px ;
+  margin:0;
+
+}
+.security{
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+font-size: 24px;
+font-weight: bold;
+font-family: arial;
+text-transform: uppercase;
+align-items: center;
+}
+
+.name{
+  text-align: left;
+  font-family: arial;
+  text-transform: uppercase;
+  font-weight: 300
+}
+.date{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  font-weight: 400;
+margin: 5px;
+padding: 0;
+
+
+}
+.valid{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 100;
+  color:rgba(233, 228, 228,0.9);
+  text-align: left;
+  width:50px;
+  position: relative;
+  
+  margin: 0;
+
+}
+.arrow{
+position: absolute;
+top:7px;
+font-size: 10px;
+}
+.format{
+  font-size: 10px;
+  font-weight: 100;
+  color:rgba(233, 228, 228,0.9);
+  float: right;
+  width:100px;
+  
+  text-align: right
+}
+.thru{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.form input{
+
+width:200px;
+height:20px;
+display: block;
+margin: 25px 0;
+color: black;
+padding:5px 20px;
+
+font-size: 18px;
+
+}
+.container{
+  display: flex;
+  height:320px;
+  width:1000px;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin:10% auto;
+  
+}
+
+
+
+
+
