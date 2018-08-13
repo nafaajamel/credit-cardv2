@@ -15,7 +15,9 @@ class App extends Component {
       company: "credit card",
       number: "",
       thru: "",
-      name: ""
+      name: "",
+      dThru : "--/--",
+      dNumber:"****************"
     }
   }
 
@@ -24,7 +26,8 @@ if(! isNaN(+val) && val.length <=16){
 
   this.setState({
     
-    number: val
+    number: val,
+   
   })
 }}
 
@@ -34,6 +37,7 @@ if(val.length<=20){
 
   this.setState({
     name: val
+
   })
 }
 
@@ -74,15 +78,21 @@ this.setState({thru:val})
           </div>
           <div className="info">
             <div className="numbers">
-              <CardNumber CardNumber={this.state.number.split("").map((x,i,a)=>{
-           
-        return i%4===0 && i!==0 ? " "+x : x
-              })   } />
+              <CardNumber CardNumber={this.state.dNumber.split("").map((x,i)=>{
+           if(i< this.state.number.length){
+             x= this.state.number.charAt(i) }
+            
+        return i%4===0 && i!==0 ? " "+ x : x
+              })    } />
               <div className="security">
                 <div className="code">5422</div>
                 <div className="date">
                   <div className="format">month/year</div>
-                  <Thru Thru={this.state.thru} />
+                  <Thru Thru={this.state.dThru.split("").map((x,i)=>{
+          if(this.state.thru.length>i ){x = this.state.thru.charAt(i) }
+          return x
+
+         } )} />
                 </div>
               </div>
               <Name UserName={this.state.name.toUpperCase()} />
@@ -98,7 +108,7 @@ this.setState({thru:val})
          changeName={(e)=>this.verifName(e.target.value) }
          name={this.state.name}
          changeThru={(e)=>this.changeThru(e.target.value)}
-         date={this.state.thru}
+         date={this.state.thru }
          />
       </div>
     );
