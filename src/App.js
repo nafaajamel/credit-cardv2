@@ -15,7 +15,7 @@ class App extends Component {
       company: "credit card",
       number: "",
       thru: "",
-      name: "",
+      name: "your name",
       dThru : "--/--",
       dNumber:"****************"
     }
