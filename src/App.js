@@ -106,7 +106,7 @@ this.setState({thru:val})
          number={this.state.number}
          changeNumber={(e)=>this.verifNumber(e.target.value)}
          changeName={(e)=>this.verifName(e.target.value) }
-         name={this.state.name}
+        
          changeThru={(e)=>this.changeThru(e.target.value)}
          date={this.state.thru }
          />
