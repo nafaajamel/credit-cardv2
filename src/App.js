@@ -33,7 +33,7 @@ if(! isNaN(+val) && val.length <=16){
 
 verifName=(val)=>{
 
-if(val.length<=20){
+if(val.length<=20 &&  ! (/[0-9]/g.test(val))){
 
   this.setState({
     name: val
@@ -41,24 +41,34 @@ if(val.length<=20){
   })
 }
 
+if(val===""){
+  this.setState({
+    name: "your name"
+
+  })
+}
 
 }
+
+
 changeThru=(val)=>{
   if(val.length<=5){
    
 if(val.length<=3 && !isNaN(+val.replace("/",0)) ){
 this.setState({thru : val})
 }
-if(val.length ==2 && this.state.thru.indexOf("/")==-1 ){
-
-this.setState({thru : val + "/"  } )
+if(val.length ===2 && this.state.thru.indexOf("/")===-1 ){
+if(+val>12){ 
+  this.setState({
+    thru:12+ "/"
+  })
+}else{
+this.setState({thru : val + "/"  } )}
 }
 if(val.length>=3 && !isNaN(+val.replace("/",0))){
 this.setState({thru:val})
 }
-
-
-  }
+}
 }
 
   
