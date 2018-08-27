@@ -17,7 +17,7 @@ class App extends Component {
       thru: "",
       name: "your name",
       dThru : "--/--",
-      dNumber:"****************"
+     
     }
   }
 
@@ -88,9 +88,8 @@ this.setState({thru:val})
           </div>
           <div className="info">
             <div className="numbers">
-              <CardNumber CardNumber={this.state.dNumber.split("").map((x,i)=>{
-           if(i< this.state.number.length){
-             x= this.state.number.charAt(i) }
+              <CardNumber CardNumber={this.state.number.padEnd(16,"*").split("").map((x,i)=>{
+          
             
         return i%4===0 && i!==0 ? " "+ x : x
               })    } />
