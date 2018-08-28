@@ -24,9 +24,10 @@ class App extends Component {
 verifNumber=(val)=>{
 if(! isNaN(+val) && val.length <=16){
 
-  this.setState({
-    
-    number: val,
+  this.setState((prevState)=>{
+    return{
+      number: val
+    }
    
   })
 }}
